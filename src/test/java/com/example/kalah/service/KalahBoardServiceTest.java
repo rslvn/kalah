@@ -189,6 +189,37 @@ public class KalahBoardServiceTest {
         kalahBoard.setWinner(kalahBoard.getPlayTurn());
 
         kalahBoardService.move(kalahBoard, 5);
-
     }
+
+    @Test(expected = InvalidMovementException.class)
+    public void testPlayerAttempsToMoveOwnHome() {
+        KalahBoard kalahBoard = KalahBoardUtility.initialKalahBoard(KalahType.SIX_TO_SIX);
+
+        kalahBoardService.move(kalahBoard, 6);
+    }
+
+    @Test(expected = InvalidMovementException.class)
+    public void testPlayerAttempsToMoveFromEmptyPit() {
+        KalahBoard kalahBoard = KalahBoardUtility.initialKalahBoard(KalahType.SIX_TO_SIX);
+
+        // create case
+        kalahBoard.getPitList().get(2).setStoneCount(0);
+        kalahBoardService.move(kalahBoard, 2);
+    }
+
+    @Test(expected = InvalidMovementException.class)
+    public void testPlayerAttempsToMoveRivalsPit() {
+        KalahBoard kalahBoard = KalahBoardUtility.initialKalahBoard(KalahType.SIX_TO_SIX);
+
+        kalahBoardService.move(kalahBoard, 8);
+    }
+
+    @Test(expected = InvalidMovementException.class)
+    public void testPlayerAttempsToMoveRivalsHome() {
+        KalahBoard kalahBoard = KalahBoardUtility.initialKalahBoard(KalahType.SIX_TO_SIX);
+
+        kalahBoardService.move(kalahBoard, 13);
+    }
+
+
 }

@@ -20,14 +20,16 @@ public class Pit {
 
     /**
      * gives pit stone count status.
+     *
      * @return true if empty; otherwise false
      */
     public boolean isEmpty() {
-        return stoneCount == 1;
+        return stoneCount == 0;
     }
 
     /**
      * index known as id or number by clients. This method gives index as Id
+     *
      * @return the id
      */
     public int getIndexAsId() {
@@ -43,6 +45,7 @@ public class Pit {
 
     /**
      * increase the sone count
+     *
      * @param increaseValue the increment value
      */
     public void increase(int increaseValue) {

@@ -11,6 +11,7 @@ public class KalahApplication {
 
     /**
      * the main method of the application
+     *
      * @param args
      */
     public static void main(String[] args) {

@@ -22,6 +22,7 @@ public class KalahPlayer {
 
     /**
      * gives the pit is the player's pit ot no
+     *
      * @param pitIndex the pitIndex
      * @return true or false
      */
@@ -31,6 +32,7 @@ public class KalahPlayer {
 
     /**
      * gives the home is the player's home or no
+     *
      * @param pitIndex the pitIndex
      * @return true or false
      */
