@@ -44,6 +44,6 @@ curl --header "Content-Type: application/json" \
 
 ```
 curl --header "Content-Type: application/json" \
-     --request POST \
+     --request PUT \
      http://localhost:8080/games/<id>/pits/5
 ```
