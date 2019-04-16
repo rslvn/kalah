@@ -34,7 +34,6 @@ public class KalahBoardUtility {
         // create the south player
         KalahPlayer playerSouth = createKalahPlayer(KalahPlayerType.SOUTH,
                 kalahType.getKalahaIndexOfSouthPlayer(),
-                kalahType.getTotalPitCount(),
                 playerPits);
 
         // put the playable pitList and the south player home to total pitList in order
@@ -51,7 +50,6 @@ public class KalahBoardUtility {
         // create the north player
         KalahPlayer playerNorth = createKalahPlayer(KalahPlayerType.NORTH,
                 kalahType.getKalahaIndexOfNorthPlayer(),
-                kalahType.getTotalPitCount(),
                 playerPits);
 
         // put the playable pitList and the north player home to total pitList in order
@@ -89,11 +87,10 @@ public class KalahBoardUtility {
      *
      * @param playerType      the KalayPlayerType
      * @param homeIndex       the home index of the KalayPlayer
-     * @param totalPitCount   the total pit count to decide the opposite pit
      * @param playablePitList the playable pit list by yhe kalay player
      * @return a KalayPlayer
      */
-    private static KalahPlayer createKalahPlayer(KalahPlayerType playerType, int homeIndex, int totalPitCount, List<Pit> playablePitList) {
+    private static KalahPlayer createKalahPlayer(KalahPlayerType playerType, int homeIndex, List<Pit> playablePitList) {
 
         Pit home = Pit.builder()
                 .pitType(PitType.HOME)

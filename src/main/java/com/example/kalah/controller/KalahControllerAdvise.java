@@ -1,5 +1,7 @@
 package com.example.kalah.controller;
 
+import com.example.kalah.exception.InvalidArgumentException;
+import com.example.kalah.exception.InvalidMovementException;
 import com.example.kalah.exception.KalahException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -16,14 +18,36 @@ public class KalahControllerAdvise {
 
 
     /**
+     * handles InvalidMovementExceptions
+     *
+     * @param e the exception as cause
+     */
+    @ExceptionHandler(InvalidMovementException.class)
+    @ResponseStatus(HttpStatus.FORBIDDEN)
+    protected void handleForbidden(Exception e) {
+        log.error("HttpStatus.FORBIDDEN", e);
+    }
+
+    /**
+     * handles InvalidArgumentExceptions
+     *
+     * @param e the exception as cause
+     */
+    @ExceptionHandler(InvalidArgumentException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    protected void handleBadRequest(Exception e) {
+        log.error("HttpStatus.BAD_REQUEST", e);
+    }
+
+    /**
      * handles KalahExceptions
      *
      * @param e the exception as cause
      */
     @ExceptionHandler(KalahException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    protected void handle(KalahException e) {
-        log.error("HttpStatus.INTERNAL_SERVER_ERROR", e);
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    protected void handleKalah(Exception e) {
+        log.error("HttpStatus.BAD_REQUEST", e);
     }
 
     /**

@@ -17,10 +17,10 @@ public class KalahService {
     private KalahMockRepository kalahMockRepository;
 
     /**
-     * Constructor
+     * The Constructor
      *
-     * @param kalahBoardService
-     * @param kalahMockRepository
+     * @param kalahBoardService the kalahBoardService
+     * @param kalahMockRepository the kalahMockRepository
      */
     public KalahService(KalahBoardService kalahBoardService, KalahMockRepository kalahMockRepository) {
         this.kalahBoardService = kalahBoardService;

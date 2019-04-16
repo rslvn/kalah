@@ -2,7 +2,7 @@ package com.example.kalah.repository;
 
 import com.example.kalah.domain.model.KalahBoard;
 import com.example.kalah.domain.model.KalahType;
-import com.example.kalah.exception.KalahException;
+import com.example.kalah.exception.InvalidArgumentException;
 import com.example.kalah.util.KalahBoardUtility;
 import org.junit.Assert;
 import org.junit.Before;
@@ -41,7 +41,7 @@ public class KalahMockRepositoryTest {
         Assert.assertEquals("", updatedKalahBoard.getPlayerNorth(), updatedKalahBoard.getPlayTurn());
     }
 
-    @Test(expected = KalahException.class)
+    @Test(expected = InvalidArgumentException.class)
     public void testGet() {
         kalahMockRepository.get("someId");
     }

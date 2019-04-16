@@ -37,6 +37,7 @@ public class KalahBoardService {
         KalahPlayer kalahPlayer = kalahBoard.getPlayTurn();
         Preconditions.checkNotNull(kalahPlayer, "kalahPlayer can not be null");
 
+        // player can play just its pits
         Preconditions.checkMovement(kalahPlayer.isOwnPit(pitIndex),
                 "The player %s can not play with this pit (pitIndex: %d)",
                 kalahPlayer.getPlayerType(),

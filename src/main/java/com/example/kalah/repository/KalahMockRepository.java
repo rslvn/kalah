@@ -1,7 +1,7 @@
 package com.example.kalah.repository;
 
 import com.example.kalah.domain.model.KalahBoard;
-import com.example.kalah.exception.KalahException;
+import com.example.kalah.exception.InvalidArgumentException;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -38,6 +38,7 @@ public class KalahMockRepository {
      */
     public KalahBoard update(KalahBoard kalahBoard) {
 
+        // validate that the board exists
         get(kalahBoard.getId());
 
         return kalahBoardMap.put(kalahBoard.getId(), kalahBoard);
@@ -51,7 +52,7 @@ public class KalahMockRepository {
      */
     public KalahBoard get(String kalahBoardId) {
         return Optional.ofNullable(kalahBoardMap.get(kalahBoardId))
-                .orElseThrow(() -> KalahException.to("No kalayBoard with Id: %s", kalahBoardId));
+                .orElseThrow(() -> InvalidArgumentException.to("No kalayBoard with Id: %s", kalahBoardId));
     }
 
 }

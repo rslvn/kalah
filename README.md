@@ -12,7 +12,7 @@
 * lombok
 * pojo-tester
 * [repository](/src/main/java/com/example.kalah/repository) is a dummy repository. It should be replaced with relational a database or nosql solution
-* Test coverage `%99` `266/268`
+* Test coverage `%99` `268/270`
     * Many functional test implemented in [KalahBoardServiceTest](/src/test/java/com/example.kalah/service/KalahBoardServiceTest.java)
 
 # build
