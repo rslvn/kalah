@@ -3,8 +3,10 @@ package com.example.kalah.domain.dto;
 import com.example.kalah.domain.model.KalahPlayer;
 import com.example.kalah.domain.model.KalahType;
 import com.example.kalah.domain.model.Pit;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -13,6 +15,8 @@ import java.util.List;
  */
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class GameDto {
 
 

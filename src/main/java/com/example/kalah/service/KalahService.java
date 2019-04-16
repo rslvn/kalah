@@ -19,7 +19,7 @@ public class KalahService {
     /**
      * The Constructor
      *
-     * @param kalahBoardService the kalahBoardService
+     * @param kalahBoardService   the kalahBoardService
      * @param kalahMockRepository the kalahMockRepository
      */
     public KalahService(KalahBoardService kalahBoardService, KalahMockRepository kalahMockRepository) {

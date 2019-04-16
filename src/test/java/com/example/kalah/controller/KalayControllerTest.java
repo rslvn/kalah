@@ -40,6 +40,10 @@ public class KalayControllerTest {
     private String moveUrlFormat = "/%s/%s/pits/%d";
     private String gamegUrlFormat = "/%s/%s";
 
+    private String jsonPathOfId = "$.id";
+    private String jsonPathOfUri = "$.uri";
+    private String jsonPathOfStatus = "$.status";
+
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
@@ -57,8 +61,8 @@ public class KalayControllerTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.id").exists())
-                .andExpect(jsonPath("$.uri").exists());
+                .andExpect(jsonPath(jsonPathOfId).exists())
+                .andExpect(jsonPath(jsonPathOfUri).exists());
     }
 
     @Test
@@ -109,7 +113,7 @@ public class KalayControllerTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").exists());
+                .andExpect(jsonPath(jsonPathOfId).exists());
     }
 
     @Test
@@ -143,7 +147,9 @@ public class KalayControllerTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").exists());
+                .andExpect(jsonPath(jsonPathOfId).exists())
+                .andExpect(jsonPath(jsonPathOfUri).exists())
+                .andExpect(jsonPath(jsonPathOfStatus).exists());
     }
 
     @Test
