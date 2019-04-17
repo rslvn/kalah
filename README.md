@@ -11,10 +11,10 @@
 * Gradle
 * lombok
 * pojo-tester
-* [repository](/src/main/java/com/example.kalah/repository) is a dummy repository. It should be replaced with relational a database or nosql solution
+* [repository](/src/main/java/com/example/kalah/repository) is a dummy repository. It should be replaced with relational a database or nosql solution
 * Test coverage `%99` `274/276`
     * Unit and Integration test
-    * Many functional test implemented in [KalahBoardServiceTest](/src/test/java/com/example.kalah/service/KalahBoardServiceTest.java)
+    * Many functional test implemented in [KalahBoardServiceTest](/src/test/java/com/example/kalah/service/KalahBoardServiceTest.java)
 
 # build
 
