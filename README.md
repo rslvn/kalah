@@ -1,6 +1,6 @@
 # kalah
 
-[![CircleCI](https://circleci.com/gh/rslvn/kalah.svg?style=svg)](https://circleci.com/gh/rslvn/kalah)
+[![CircleCI](https://circleci.com/gh/rslvn/kalah-game.svg?style=svg)](https://circleci.com/gh/rslvn/kalah-game)
 [![Coverage Code](https://sonarcloud.io/api/project_badges/measure?project=rslvn_kalah-game&metric=coverage)](https://sonarcloud.io/dashboard?id=rslvn_kalah-game)
 [![Lines Of Code](https://sonarcloud.io/api/project_badges/measure?project=rslvn_kalah-game&metric=ncloc)](https://sonarcloud.io/dashboard?id=rslvn_kalah-game)
 [![Technical Debit](https://sonarcloud.io/api/project_badges/measure?project=rslvn_kalah-game&metric=sqale_index)](https://sonarcloud.io/dashboard?id=rslvn_kalah-game)
