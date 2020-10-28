@@ -1,6 +1,8 @@
 plugins {
     id 'org.springframework.boot' version '2.1.4.RELEASE'
     id 'java'
+    id "org.sonarqube" version "3.0"
+    id 'jacoco'
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -30,7 +32,24 @@ dependencies {
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'pl.pojo:pojo-tester:0.7.6'
 }
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "rslvn_best-package"
+        property "sonar.organization", "rslvn"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        csv.enabled false
+        html.enabled false
+    }
+}
+test.finalizedBy jacocoTestReport
